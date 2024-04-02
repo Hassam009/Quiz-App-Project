@@ -13,5 +13,16 @@ const questions=[
     'a':"Js",
     'correct':"a",
 },
-
 ]
+let index=0;
+const submit=()=>{
+    const data=questions[index];
+const ans=getAnswer()
+if(ans==data.correct){
+    right++;
+}
+else{
+    wrong++;
+}
+index++;
+}
