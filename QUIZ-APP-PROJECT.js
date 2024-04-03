@@ -17,7 +17,7 @@ const questions=[
 let index=0;
 let total=questions.length;
 let right=0, wrong=0;
-quesBox.innerText=`${index+1})${data.que}`
+const quesBox=document.getElementById("quesBox")
 const optionInput=document.querySelectorAll('.options')
 
 const loadQuestion=()=>{
@@ -26,8 +26,9 @@ const loadQuestion=()=>{
     }
     reset();
     const data=questions[index]
-   
-
+    quesBox.innerText=`${index+1})${data.que}`
+optionInput[0].nextElementSibling.innerHTML=data.a;
+optionInput[1].nextElementSibling.innerHTML=data.b;
 }
 
 const submit=()=>{
