@@ -11,6 +11,7 @@ const questions=[
     'a':"Html",
     'b':"Css",
     'c':"Js",
+    'd':'php',
     'correct':"b",
 }
 ]
@@ -32,6 +33,20 @@ const loadQuestion = () => {
     optionInput[2].nextElementSibling.innerHTML = data.c; // Add this line to populate option c
     optionInput[3].nextElementSibling.innerHTML = data.d; // Add this line to populate option d
 }
+
+const loadQuestionPrev = () => {
+    if (index > 0) {
+        index--;
+        loadQuestion();
+    }
+};
+
+const loadQuestionNext = () => {
+    if (index < total - 1) {
+        index++;
+        loadQuestion();
+    }
+};
 
 const submit=()=>{
     const data=questions[index];
@@ -64,7 +79,12 @@ return answer
 }
 
 const endQuiz = () => {
-    quesBox.innerText = "Thanks for Playing the quiz";
+    document.getElementById("box").innerHTML=`
+    <div style="text-align: center">
+    <h3>Thank you for Playing the Quiz </h3>
+    <h2>${right} /${total} are Correct </h2>
+    </div>
+    `
 }
 
 

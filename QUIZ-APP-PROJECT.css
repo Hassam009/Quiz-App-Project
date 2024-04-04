@@ -35,7 +35,25 @@
     }
     
     .btn{
-        width:100%;
+        width:33%;
+        padding:5px;
+        font-size:20px;
+        color:white;
+        border:none;
+        border-radius:5px;
+        background-color:#3498db;
+    }
+    .btn1{
+        width:30%;
+        padding:5px;
+        font-size:20px;
+        color:white;
+        border:none;
+        border-radius:5px;
+        background-color:#3498db;
+    }
+    .btn2{
+        width:33%;
         padding:5px;
         font-size:20px;
         color:white;
